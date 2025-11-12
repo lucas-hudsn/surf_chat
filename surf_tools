@@ -53,7 +53,6 @@ def get_weather(dict) -> dict:
 
 
 # The input should be a dictionary with the "input" key for tool usage
-coords = geocode_address.invoke("Kilcunda")
-print(coords)
-weather = get_weather.invoke({"latitude": coords[0], "longitude": coords[1]})
+
+weather = agent.invoke({"latitude": coords[0], "longitude": coords[1]})
 print(weather)
